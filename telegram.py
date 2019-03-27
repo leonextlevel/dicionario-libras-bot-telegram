@@ -13,7 +13,7 @@ def gerar_link(palavra):
 	browser.set_window_position(0,0)
 	time.sleep(2)
 	browser.get("http://www.acessibilidadebrasil.org.br/libras_3/")
-	browser.implicitly_wait(20)
+	browser.implicitly_wait(10)
 
 	browser.find_element_by_xpath('//*[@id="search_field"]').click()
 	browser.find_element_by_xpath('//*[@id="search_field"]').send_keys(palavra)
@@ -21,15 +21,17 @@ def gerar_link(palavra):
 	browser.find_element_by_xpath('//*[@id="0"]').click()
 	browser.find_element_by_xpath('//*[@id="0"]').send_keys(u'\ue015')
 
-
-	site = "http://www.acessibilidadebrasil.org.br/libras_3/"
-	page = urlopen(site)
-	soup = BeautifulSoup(page, 'html.parser')
+	html = browser.page_source
+	soup = BeautifulSoup(html)
+	#site = "http://www.acessibilidadebrasil.org.br/libras_3/"
+	#page = urlopen(site)
+	#soup = BeautifulSoup(page, 'html.parser')
 
 	time.sleep(3)
 
 	imagem = soup.img.get('src')
-	link = "http://www.acessibilidadebrasil.org.br/libras_3/"+imagem
+	link = imagem
+	browser.quit()
 	return('''
 Palavra: {palavra}
 imagem: {link}'''.format(palavra=palavra, link=link))
