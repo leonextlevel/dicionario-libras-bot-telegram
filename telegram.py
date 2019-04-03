@@ -22,7 +22,7 @@ def gerar_link(palavra):
 	browser.find_element_by_xpath('//*[@id="0"]').send_keys(u'\ue015')
 
 	html = browser.page_source
-	soup = BeautifulSoup(html)
+	soup = BeautifulSoup(html, 'html.parser')
 	#site = "http://www.acessibilidadebrasil.org.br/libras_3/"
 	#page = urlopen(site)
 	#soup = BeautifulSoup(page, 'html.parser')
@@ -31,10 +31,13 @@ def gerar_link(palavra):
 
 	imagem = soup.img.get('src')
 	link = imagem
-	browser.quit()
+
+
 	return('''
 Palavra: {palavra}
 imagem: {link}'''.format(palavra=palavra, link=link))
+
+browser.quit()
 
 bot_token = '701005414:AAGUfx_l4M33Pftx_AnTllMc4_jtmICS-Xk'
 
