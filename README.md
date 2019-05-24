@@ -1,4 +1,5 @@
-# dicionario-libras-bot
+# Dicionário de Libras
+## Bot para o Telegram
 
 Bot para o Telegram com o intuito de facilitar a vida de pessoas que dependem da Linguagem Brasileira de Sinais (LIBRAS).
 
