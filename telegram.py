@@ -38,8 +38,8 @@ def comando_libra(message):
         try:
                 bot.reply_to(message, 'Estou procurando esta palavra, por favor aguarde!')
                 bot.reply_to(message, gerar_link(comando[1]))
-        except IndexError:
+        except Exception:
                 bot.reply_to(message, 'Palavra indisponível')
 
-while True:
-        bot.polling()
+
+bot.polling()

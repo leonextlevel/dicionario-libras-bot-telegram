@@ -4,7 +4,7 @@ from bs4 import BeautifulSoup
 
 
 def gerar_link(palavra):
-        driver = webdriver.PhantomJS()
+        driver = webdriver.PhantomJS("./phantomjs")
         driver.get("http://www.acessibilidadebrasil.org.br/libras_3/")
         driver.implicitly_wait(10)
 
