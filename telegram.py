@@ -41,5 +41,5 @@ def comando_libra(message):
         except IndexError:
                 bot.reply_to(message, 'Palavra indisponível')
 
-
-bot.polling()
+while True:
+        bot.polling()
