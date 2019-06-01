@@ -15,11 +15,12 @@ def gerar_link(palavra):
 
         html = driver.page_source
         soup = BeautifulSoup(html, 'html.parser')
-        time.sleep(3)
+        time.sleep(1)
         gif = soup.source.get('src')
         link = "http://www.acessibilidadebrasil.org.br/libras_3/" + gif
-        return('''ENCONTREI ELA... ( ͡° ͜ʖ ͡°)
+        return('''Encontrei algo... ( ͡° ͜ʖ ͡°)
+Espero ser o que buscava!
 
-Palavra: {palavra}
+Palavra: **{palavra}**
 
 Disponível em: {link}'''.format(palavra=palavra.upper(), link=link))
