@@ -21,6 +21,6 @@ def gerar_link(palavra):
         return('''Encontrei algo... ( ͡° ͜ʖ ͡°)
 Espero ser o que buscava!
 
-Palavra: **{palavra}**
+Palavra: {palavra}
 
 Disponível em: {link}'''.format(palavra=palavra.upper(), link=link))

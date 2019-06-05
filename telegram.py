@@ -20,7 +20,7 @@ VAMOS COMEÇAR!!!
 
 Para isso use um dos comandos que disponibilizo.
 
-Comandos
+Comandos:
 
 /start - para ver essa mensagem novamente
 /help - para receber ajuda a qualquer momento
